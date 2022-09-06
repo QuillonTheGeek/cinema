@@ -1,14 +1,16 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import Movies from "./component/movies";
 import Customers from "./component/customers";
 import Rentals from "./component/rentals";
 import NotFound from "./component/notfound";
+import NavBar from "./component/navbar";
+import "./App.css";
 
 function App() {
   return (
     <main className="container">
+      <NavBar />
       <Switch>
         <Route path="/movies" component={Movies} />
         <Route path="/customers" component={Customers} />
